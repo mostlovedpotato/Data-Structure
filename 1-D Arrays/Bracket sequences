@@ -1,0 +1,38 @@
+In this question we have to find the no. of correct bracket sequences so. 
+
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+	string s;
+	cin>>s;
+	int n=s.length();
+	int ans=0,c=0;
+	for(int i=0;i<n;i++)
+	{
+		if(s[i]=='(')                     ////  The first thing in the string starting at any point should be "("
+		{
+			int j=i;                      // From this point we are taking string
+			c=0;
+			int len=n;
+			while(len--)                  /// traversing the string till it has travelled the length of the full string.
+			{
+				if(s[j]=='(')               /// if we encounter "(" the we increment the counter.
+					c++;
+				else
+					c--;                 // if not it means we encounter ")" then we decrement the counter.
+				if(c<0)                 //if at any point while traversing the string no . of ( is less than no. of ) we say it is not possible and break out of loop.
+					break;
+				if(j==(n-1))             // when we hit the last char while traversing the string we switch it to first char of string.
+					j=0;
+				else
+					j++;                   // else we just go on increamenting the traversal
+			}
+			if(c==0)                // at last if the total no. of ( brakcets ==== total no. of ) brackets our sequence is good and we increment in the ans.
+				ans++;
+		}
+	}
+	cout<<ans;
+	return 0;
+}
