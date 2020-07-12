@@ -1,0 +1,27 @@
+https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/micro-and-array-update/description/
+
+
+
+In this question we just have to compare with the lowest number in the array which we got so why just store the full array
+instead we just keep updating one temp variable to the least number from the input array and then the answer would be the
+differnce of the given minimum value each should attain and the minimum number in array.
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int t;
+  cin>>t;
+	while(t--){
+		int n, k;
+    cin>>n>>k;
+		int ans = k;
+		for(int i=1; i<=n; i++){
+			int temp;
+      cin>>temp;
+			ans = min(ans, temp);
+		}
+		cout<<k-ans<<endl;
+	}
+	return 0;
+}
