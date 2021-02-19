@@ -8,4 +8,4 @@
 
 ## Tree Data Structures
 
-### [BST]()
+### [BST](https://github.com/mostlovedpotato/Data-Structure/tree/master/BST)
