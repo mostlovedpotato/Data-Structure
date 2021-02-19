@@ -2,9 +2,9 @@
 
 #### This file contains quesstions related to data structure. solutions in c++
 
-## [Linear Data Structures]()
+## Linear Data Structures
 
-
+### [Arrays]()
 
 ## Tree Data Structures
 
